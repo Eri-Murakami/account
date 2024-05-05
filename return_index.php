@@ -107,8 +107,16 @@
             
             <div>
                 <label>性別</label><br><!--初期値「男」-->
-                <input type="radio" name="sex" value="男" >男
-                <input type="radio" name="sex" value="女" >女
+                <input type="radio" name="sex" value="1">男
+                <input type="radio" name="sex" value="2">女
+                
+                <?php
+                $sex = $_POST['sex'];
+                if($sex){
+                    echo $sex;
+                }
+                ?>
+                 
             </div>
             
             
@@ -125,6 +133,7 @@
             <div>
                 <label>住所（都道府県）</label><br><!--初期値空白-->
                 <select class="dropdown" name="address1">
+                   
                     <option value="error" selected></option>
                     <option value="北海道">北海道</option>
                     <option value="青森県">青森県</option>
@@ -174,6 +183,7 @@
                     <option value="鹿児島県">鹿児島県</option>
                     <option value="沖縄県">沖縄県</option>
                     </select>
+                
             </div>
             
             <div>
@@ -200,8 +210,8 @@
             
             <div>
                 <label>アカウント制限</label><br><!--初期値「一般」-->
-                 <select name="account"required>
-                     <option value="一般"selected>一般</option>
+                 <select name="account">
+                     <option value="一般">一般</option>
                      <option value="管理者">管理者</option>
                  </select>
             </div>
