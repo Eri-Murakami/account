@@ -10,6 +10,7 @@
     </head>
     
     <body>
+        
          <img src="diblog_logo.jpg"width=20%>
         <header>
            <div class="menu">トップ</div>
@@ -25,38 +26,67 @@
     
         <h1>アカウント登録画面</h1>
         
-        <form method="post"action="http://localhost/account/mail_confirm.php">
+        <form method="post"action="mail_confirm.php"method="post">
            
             <div>
-                <label>名前(性)</label><br><!--　最大10文字　/　初期値空白　/　ひらがな、漢字のみ　-->
-                <input type="text"class="text"size="35"name="last_name"maxlength="10"pattern="^[ぁ-ん一-龠]*$">
+                <label>名前（性）</label><br><!--　最大10文字　/　初期値空白　/　ひらがな、漢字のみ　-->
+                <input type="text"class="text"size="35"name="last_name"maxlength="10"pattern="^[ぁ-ん一-龠]*$"
+                       value="<?php 
+                              if(!empty($_POST['last_name'])){
+                                  echo $_POST['last_name'];
+                              }
+                              ?>">
             </div>
             
-             <div>
-                <label>名前(名)</label><br><!--　最大10文字　/　初期値空白　/　ひらがな、漢字のみ　-->
-                <input type="text"class="text"size="35"name="first_name"maxlength="10"pattern="^[ぁ-ん一-龠]*$">
+            <div>
+                <label>名前（名）</label><br><!--　最大10文字　/　初期値空白　/　ひらがな、漢字のみ　-->
+                <input type="text"class="text"size="35"name="first_name"maxlength="10"pattern="^[ぁ-ん一-龠]*$"
+                       value="<?php 
+                              if(!empty($_POST['first_name'])){
+                                  echo $_POST['first_name'];
+                              }
+                              ?>">
+            </div>
+            
+            <div>
+                <label>カナ（性）</label><br><!--　最大10文字　/　初期値空白　/　カタカナのみ　-->
+                <input type="text"class="text"size="35"name="last_name2"maxlength="10"pattern="^[ァ-ヶｱ-ﾝﾞﾟ]+$"
+                       value="<?php 
+                              if(!empty($_POST['last_name2'])){
+                                  echo $_POST['last_name2'];
+                              }
+                              ?>">
             </div>
             
              <div>
                 <label>カナ（性）</label><br><!--　最大10文字　/　初期値空白　/　カタカナのみ　-->
-                <input type="text"class="text"size="35"name="last_name2"maxlength="10"pattern="^[ァ-ヶｱ-ﾝﾞﾟ]+$">
-            </div>
-            
-             <div>
-                <label>カナ(名)</label><br><!--　最大10文字　/　初期値空白　/　カタカナのみ　-->
-                <input type="text"class="text"size="35"name="first_name2"maxlength="10"pattern="^[ァ-ヶｱ-ﾝﾞﾟ]+$">
+                <input type="text"class="text"size="35"name="first_name2"maxlength="10"pattern="^[ァ-ヶｱ-ﾝﾞﾟ]+$"
+                       value="<?php 
+                              if(!empty($_POST['first_name2'])){
+                                  echo $_POST['first_name2'];
+                              }
+                              ?>">
             </div>
             
             <div>
-                <label>メールアドレス</label>
+                <label>メールアドレス</label><br> 
                 <!--　最大10文字　/　初期値空白　/　半角英数字、半角ハイフン、半角記号(ハイフンとアットマーク)のみ　※「.」いらない？-->
-                <br>
-                <input type="mail"class="text"size="35"name="mail"maxlength="100"pattern="^[0-9a-zA-Z\-\@]*$">
+                <input type="mail"class="text"size="35"name="mail"maxlength="100"pattern="^[0-9a-zA-Z\-\@]*$"
+                       value="<?php 
+                              if(!empty($_POST['mail'])){
+                                  echo $_POST['mail'];
+                              }
+                              ?>">
             </div>
             
              <div>
                 <label>パスワード</label><br><!--　最大10文字　/　初期値空白　/　半角英数字　-->
-                <input type="password"class="text"size="10"name="password"maxlength="10"pattern="^[a-zA-Z-9]+$^">
+                <input type="password"class="text"size="10"name="password"maxlength="10"pattern="^[a-zA-Z-9]+$^"
+                       value="<?php 
+                              if(!empty($_POST['password'])){
+                                  echo $_POST['password'];
+                              }
+                              ?>">
                  <!--目のアイコンをつけてパスワードを表示する-->
                 <!--<i id="eye" class="fa-solid fa-eye"></i>
                  <script>
@@ -75,18 +105,24 @@
                  </script>-->
             </div>
             
-             <div>
+            <div>
                 <label>性別</label><br><!--初期値「男」-->
-                <input type="radio" name="sex" value="男" checked="checked">男
+                <input type="radio" name="sex" value="男" >男
                 <input type="radio" name="sex" value="女" >女
             </div>
             
-             <div>
+            
+            <div>
                 <label>郵便番号</label><br><!--　最大7文字　/　初期値空白　/　半角数字のみ-->
-                <input type="text"size="10"name="post_code"maxlength="7"pattern="[0-9]+">
+                <input type="text"size="10"name="post_code"maxlength="7"pattern="[0-9]+"
+                       value="<?php 
+                              if(!empty($_POST['post_code'])){
+                                  echo $_POST['post_code'];
+                              }
+                              ?>">
             </div>
             
-             <div>
+            <div>
                 <label>住所（都道府県）</label><br><!--初期値空白-->
                 <select class="dropdown" name="address1">
                     <option value="error" selected></option>
@@ -138,22 +174,31 @@
                     <option value="鹿児島県">鹿児島県</option>
                     <option value="沖縄県">沖縄県</option>
                     </select>
-                
             </div>
             
-             <div>
+            <div>
                 <label>住所（市区町村）</label><br>
                  <!--　最大10文字　/　初期値空白　/　ひらがな、漢字、数字、カタカナ、記号(ハイフンとアットマーク)のみ　-->
-                <input type="text"class="text"size="35"name="address2"maxlength="10"pattern="^[ぁ-んァ-ヶｱ-ﾝﾞﾟ一-龠\-\s\0-9]*$">
+                <input type="text"class="text"size="35"name="address2"maxlength="10"pattern="^[ぁ-んァ-ヶｱ-ﾝﾞﾟ一-龠\-\s\0-9]*$"
+                       value="<?php 
+                              if(!empty($_POST['address2'])){
+                                  echo $_POST['address2'];
+                              }
+                              ?>">
             </div>
             
              <div>
                 <label>住所（番地）</label><br>
-                 <!--　　最大100文字　/　初期値空白　/　ひらがな、漢字、数字、カタカナ、記号(ハイフンとアットマーク)のみ　-->
-                <input type="text"class="text"size="35"name="address3"maxlength="100"pattern="^[ぁ-んァ-ヶｱ-ﾝﾞﾟ一-龠\-\s\0-9]*$">
+                 <!--　最大10文字　/　初期値空白　/　ひらがな、漢字、数字、カタカナ、記号(ハイフンとアットマーク)のみ　-->
+                <input type="text"class="text"size="35"name="address3"maxlength="10"pattern="^[ぁ-んァ-ヶｱ-ﾝﾞﾟ一-龠\-\s\0-9]*$"
+                       value="<?php 
+                              if(!empty($_POST['address3'])){
+                                  echo $_POST['address3'];
+                              }
+                              ?>">
             </div>
             
-             <div>
+            <div>
                 <label>アカウント制限</label><br><!--初期値「一般」-->
                  <select name="account"required>
                      <option value="一般"selected>一般</option>
@@ -161,9 +206,8 @@
                  </select>
             </div>
             
-                   
             <div>
-                <input type="submit"class="submit"value="確認する">
+                <input type="submit"class="submit"value="送信する">
             </div>
         
         </form>
