@@ -5,13 +5,15 @@
         <meta charset="utf-8">
         <title>お問い合わせフォームを作る</title>
         <link rel="stylesheet"type="text/css"href="home%20style.css">
+        <!--目のアイコンをつけてパスワードを表示する-->
+        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
     </head>
     
     <body>
     
         <h1>アカウント登録画面</h1>
         
-        <form method="post"action="mail_confirm.php">
+        <form method="post"action="C:\xampp\htdocs\php-practice\mail_confirm.php">
            
             <div>
                 <label>名前(性)</label><br><!--　最大10文字　/　初期値空白　/　ひらがな、漢字のみ　-->
@@ -43,6 +45,22 @@
              <div>
                 <label>パスワード</label><br><!--　最大10文字　/　初期値空白　/　半角英数字　-->
                 <input type="password"class="text"size="10"name="password"maxlength="10"pattern="^[a-zA-Z-9]+$^">
+                 <!--目のアイコンをつけてパスワードを表示する-->
+                <!--<i id="eye" class="fa-solid fa-eye"></i>
+                 <script>
+                  let eye = document.getElementById("eye");
+                  eye.addEventListener('click', function () {
+                       if (this.previousElementSibling.getAttribute('type') == 'password') {
+                            this.previousElementSibling.setAttribute('type', 'text');
+                            this.classList.toggle('fa-eye');
+                            this.classList.toggle('fa-eye-slash');
+                       } else {
+                            this.previousElementSibling.setAttribute('type', 'password');
+                            this.classList.toggle('fa-eye');
+                            this.classList.toggle('fa-eye-slash');
+                       }
+                  })
+                 </script>-->
             </div>
             
              <div>
