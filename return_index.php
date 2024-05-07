@@ -107,16 +107,8 @@
             
             <div>
                 <label>性別</label><br><!--初期値「男」-->
-                <input type="radio" name="sex" value="1">男
-                <input type="radio" name="sex" value="2">女
-                
-                <?php
-                $sex = $_POST['sex'];
-                if($sex){
-                    echo $sex;
-                }
-                ?>
-                 
+                <input type="radio" name="sex" value="男" checked="checked">男
+                <input type="radio" name="sex" value="女" >女
             </div>
             
             
@@ -134,7 +126,7 @@
                 <label>住所（都道府県）</label><br><!--初期値空白-->
                 <select class="dropdown" name="address1">
                    
-                    <option value="error" selected></option>
+                    <option value="" selected></option>
                     <option value="北海道">北海道</option>
                     <option value="青森県">青森県</option>
                     <option value="岩手県">岩手県</option>
