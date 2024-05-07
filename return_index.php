@@ -107,8 +107,10 @@
             
             <div>
                 <label>性別</label><br><!--初期値「男」-->
-                <input type="radio" name="sex" value="男" checked="checked">男
-                <input type="radio" name="sex" value="女" >女
+                <input type="radio" name="sex" value="1"
+                       <?php if (isset($_POST['sex'])&& $_POST['sex']=="1")echo 'checked';?>>男
+                <input type="radio" name="sex" value="2"
+                        <?php if (isset($_POST['sex'])&& $_POST['sex']=="2")echo 'checked';?>>女
             </div>
             
             
