@@ -107,10 +107,10 @@
             
             <div>
                 <label>性別</label><br><!--初期値「男」-->
-                <input type="radio" name="sex" value="1"
-                       <?php if (isset($_POST['sex'])&& $_POST['sex']=="1")echo 'checked';?>>男
-                <input type="radio" name="sex" value="2"
-                        <?php if (isset($_POST['sex'])&& $_POST['sex']=="2")echo 'checked';?>>女
+                <input type="radio" name="sex" value="男"
+                       <?php if (isset($_POST['sex'])&& $_POST['sex']=="男")echo 'checked';?>>男
+                <input type="radio" name="sex" value="女"
+                        <?php if (isset($_POST['sex'])&& $_POST['sex']=="女")echo 'checked';?>>女
             </div>
             
             
@@ -205,8 +205,8 @@
             <div>
                 <label>アカウント制限</label><br><!--初期値「一般」-->
                  <select name="account">
-                     <option value="一般">一般</option>
-                     <option value="管理者">管理者</option>
+                     <option value="一般" <?php if (isset($_POST['account'])&& $_POST['account']=="一般")echo 'selected';?>>一般</option>
+                     <option value="管理者" <?php if (isset($_POST['account'])&& $_POST['account']=="管理者")echo 'selected';?>>管理者</option>
                  </select>
             </div>
             
