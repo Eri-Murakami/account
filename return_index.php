@@ -130,14 +130,7 @@
                          <?php
                         $account = 0;
                         if(!empty($_POST['account1'])) {
-                            $age = $_POST['account1'];
-                        }
-                        for ($i = 0; $i <=47; $i++) {
-                            if ($i == $account1) {
-                                echo "<option value=".$i." selected>".$i."</option>";
-                            } else {
-                                echo "<option value=".$i.">".$i."</option>";
-                            }
+                            echo "<option value=".$i." selected>".$i."</option>";
                         }
                     ?>>
                     
