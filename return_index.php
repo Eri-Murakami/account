@@ -125,14 +125,12 @@
             </div>
             
             <div>
-                <label>住所（都道府県）</label><br><!--初期値空白-->
-                <select class="dropdown" name="address1"
-                         <?php
-                        $account = 0;
-                        if(!empty($_POST['account1'])) {
-                            echo "<option value=".$i." selected>".$i."</option>";
-                        }
-                    ?>>
+                <label for="category_id">住所（都道府県）</label><br><!--初期値空白-->
+                <select class="dropdown" name="address1" id="category_id">
+                    @foreach($address1 as $category)
+                    <option value="{{ $category->id}}" @if(old('category_id') == $category->id)selected @endif{{$category->category_name}}</option>
+                    @endforeach
+                    
                     
                     <option value=""></option>
                     <option value="1">北海道</option>
