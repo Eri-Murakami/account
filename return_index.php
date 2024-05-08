@@ -125,61 +125,57 @@
             </div>
             
             <div>
-                <label for="category_id">住所（都道府県）</label><br><!--初期値空白-->
-                <select class="dropdown" name="address1" id="category_id">
-                    @foreach($address1 as $category)
-                    <option value="{{ $category->id}}" @if(old('category_id') == $category->id)selected @endif{{$category->category_name}}</option>
-                    @endforeach
-                    
+                <label>住所（都道府県）</label><br><!--初期値空白-->
+                <select class="dropdown" name="address1">
                     
                     <option value=""></option>
-                    <option value="1">北海道</option>
-                    <option value="2">青森県</option>
-                    <option value="3">岩手県</option>
-                    <option value="4">宮城県</option>
-                    <option value="5">秋田県</option>
-                    <option value="6">山形県</option>
-                    <option value="7">福島県</option>
-                    <option value="8">茨城県</option>
-                    <option value="9">栃木県</option>
-                    <option value="10">群馬県</option>
-                    <option value="11">埼玉県</option>
-                    <option value="12">千葉県</option>
-                    <option value="13">東京都</option>
-                    <option value="14">神奈川県</option>
-                    <option value="15">新潟県</option>
-                    <option value="16">富山県</option>
-                    <option value="17">石川県</option>
-                    <option value="18">福井県</option>
-                    <option value="19">山梨県</option>
-                    <option value="20">長野県</option>
-                    <option value="21">岐阜県</option>
-                    <option value="22">静岡県</option>
-                    <option value="23">愛知県</option>
-                    <option value="24">三重県</option>
-                    <option value="25">滋賀県</option>
-                    <option value="26">京都府</option>
-                    <option value="27">大阪府</option>
-                    <option value="28">兵庫県</option>
-                    <option value="29">奈良県</option>
-                    <option value="30">和歌山県</option>
-                    <option value="31">鳥取県</option>
-                    <option value="32">島根県</option>
-                    <option value="33">岡山県</option>
-                    <option value="34">広島県</option>
-                    <option value="35">山口県</option>
-                    <option value="36">徳島県</option>
-                    <option value="37">香川県</option>
-                    <option value="38">愛媛県</option>
-                    <option value="39">高知県</option>
-                    <option value="40">福岡県</option>
-                    <option value="41">佐賀県</option>
-                    <option value="42">長崎県</option>
-                    <option value="43">熊本県</option>
-                    <option value="44">大分県</option>
-                    <option value="45">宮崎県</option>
-                    <option value="46">鹿児島県</option>
-                    <option value="47">沖縄県</option>
+                    <option value="北海道"<?php if (isset($_POST['address1'])&& $_POST['address1']=="北海道")echo 'selected';?>>北海道</option>
+                    <option value="青森県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="青森県")echo 'selected';?>>青森県</option>
+                    <option value="岩手県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="岩手県")echo 'selected';?>>岩手県</option>
+                    <option value="宮城県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="宮城県")echo 'selected';?>>宮城県</option>
+                    <option value="秋田県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="秋田県")echo 'selected';?>>秋田県</option>
+                    <option value="山形県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="山形県")echo 'selected';?>>山形県</option>
+                    <option value="福島県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="福島県")echo 'selected';?>>福島県</option>
+                    <option value="茨城県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="茨城県")echo 'selected';?>>茨城県</option>
+                    <option value="栃木県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="栃木県")echo 'selected';?>>栃木県</option>
+                    <option value="群馬県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="群馬県")echo 'selected';?>>群馬県</option>
+                    <option value="埼玉県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="埼玉県")echo 'selected';?>>埼玉県</option>
+                    <option value="千葉県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="千葉県")echo 'selected';?>>千葉県</option>
+                    <option value="東京都"<?php if (isset($_POST['address1'])&& $_POST['address1']=="東京都")echo 'selected';?>>東京都</option>
+                    <option value="神奈川県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="神奈川県")echo 'selected';?>>神奈川県</option>
+                    <option value="新潟県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="新潟県")echo 'selected';?>>新潟県</option>
+                    <option value="富山県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="富山県")echo 'selected';?>>富山県</option>
+                    <option value="石川県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="石川県")echo 'selected';?>>石川県</option>
+                    <option value="福井県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="福島県")echo 'selected';?>>福井県</option>
+                    <option value="山梨県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="山梨県")echo 'selected';?>>山梨県</option>
+                    <option value="長野県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="長野県")echo 'selected';?>>長野県</option>
+                    <option value="岐阜県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="岐阜県")echo 'selected';?>>岐阜県</option>
+                    <option value="静岡県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="静岡県")echo 'selected';?>>静岡県</option>
+                    <option value="愛知県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="愛知県")echo 'selected';?>>愛知県</option>
+                    <option value="三重県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="三重県")echo 'selected';?>>三重県</option>
+                    <option value="滋賀県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="滋賀県")echo 'selected';?>>滋賀県</option>
+                    <option value="京都府"<?php if (isset($_POST['address1'])&& $_POST['address1']=="京都府")echo 'selected';?>>京都府</option>
+                    <option value="大阪府"<?php if (isset($_POST['address1'])&& $_POST['address1']=="大阪府")echo 'selected';?>>大阪府</option>
+                    <option value="兵庫県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="兵庫県")echo 'selected';?>>兵庫県</option>
+                    <option value="奈良県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="奈良県")echo 'selected';?>>奈良県</option>
+                    <option value="和歌山県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="和歌山県")echo 'selected';?>>和歌山県</option>
+                    <option value="鳥取県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="鳥取県")echo 'selected';?>>鳥取県</option>
+                    <option value="島根県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="島根県")echo 'selected';?>>島根県</option>
+                    <option value="岡山県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="岡山県")echo 'selected';?>>岡山県</option>
+                    <option value="広島県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="広島県")echo 'selected';?>>広島県</option>
+                    <option value="山口県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="山口県")echo 'selected';?>>山口県</option>
+                    <option value="徳島県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="徳島県")echo 'selected';?>>徳島県</option>
+                    <option value="香川県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="香川県")echo 'selected';?>>香川県</option>
+                    <option value="愛媛県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="愛知県")echo 'selected';?>>愛媛県</option>
+                    <option value="高知県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="高知県")echo 'selected';?>>高知県</option>
+                    <option value="福岡県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="福岡県")echo 'selected';?>>福岡県</option>
+                    <option value="佐賀県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="佐賀県")echo 'selected';?>>佐賀県</option>
+                    <option value="長崎県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="長崎県")echo 'selected';?>>長崎県</option>
+                    <option value="熊本県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="熊本県")echo 'selected';?>>熊本県</option>
+                    <option value="大分県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="大分県")echo 'selected';?>>大分県</option>
+                    <option value="宮崎県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="宮崎県")echo 'selected';?>>宮崎県</option>
+                    <option value="鹿児島県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="鹿児島県")echo 'selected';?>>鹿児島県</option>
+                    <option value="沖縄県"<?php if (isset($_POST['address1'])&& $_POST['address1']=="沖縄県")echo 'selected';?>>沖縄県</option>
                     </select>
                 
             </div>
