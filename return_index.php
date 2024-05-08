@@ -194,6 +194,7 @@
              <div>
                 <label>住所（番地）</label><br>
                  <!--　最大10文字　/　初期値空白　/　ひらがな、漢字、数字、カタカナ、記号(ハイフンとアットマーク)のみ　-->
+                 <!--スペースのみでも送信可能になっている-->
                 <input type="text"class="text"size="35"name="address3"maxlength="10"pattern="^[ぁ-んァ-ヶｱ-ﾝﾞﾟ一-龠\-\s\0-9]*$"
                        value="<?php 
                               if(!empty($_POST['address3'])){
