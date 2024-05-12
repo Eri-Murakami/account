@@ -52,7 +52,7 @@
         ?>
     </p>
         
-       <!-- 「登録する」を押したときに空白だった場合、エラーメッセージ「名前（性）が未入力です。」と赤字でメッセージを出す-->
+    <!-- 「登録する」を押したときに空白だった場合、エラーメッセージ「名前（性）が未入力です。」と赤字でメッセージを出す-->
     <p id="validate_msg" style="color: red;"></p>
         <script>
             function testCheck(){
@@ -69,7 +69,8 @@
     <p>名前(名)
         <br>
         <?php
-        $errors = []; 
+        /*「送信する」ボタンから移動してきたときに赤文字でメッセージが出る*/
+       /* $errors = []; 
         if(empty($_POST['first_name'])){
             $errors[]="<font color='red'>名前（名）が未入力です。</font>";
         }
@@ -77,17 +78,30 @@
             foreach($errors as $error){
                 echo $error;
             }
-        }else{
+        }else{*/
             echo $_POST['first_name'];
-        }
+        /*}*/
         ?>
     </p>
+    <!-- 「登録する」を押したときに空白だった場合、エラーメッセージ「名前（名）が未入力です。」と赤字でメッセージを出す-->
+    <p id="validate_msg" style="color: red;"></p>
+        <script>
+            function testCheck(){
+                var test2 = document.getElementById("test2").value;
+                if(test2.length = []){
+                    var validate = "名前（名）が未入力です。";
+                    document.getElementById("validate_msg").innerHTML = validate; 
+                    return false; 
+                }
+            }
+        </script>
         
     
     <p>カナ（性）
         <br>
          <?php
-        $errors = []; 
+        /*「送信する」ボタンから移動してきたときに赤文字でメッセージが出る*/
+       /* $errors = []; 
         if(empty($_POST['last_name'])){
             $errors[]="<font color='red'>カナ（性）が未入力です。</font>";
         }
@@ -95,16 +109,19 @@
             foreach($errors as $error){
                 echo $error;
             }
-        }else{
+        }else{*/
             echo $_POST['last_name'];
-        }
+       /* }*/
         ?>
     </p>
+    <!-- 「登録する」を押したときに空白だった場合、エラーメッセージ「カナ（性）が未入力です。」と赤字でメッセージを出す-->
+   <!---->
         
     <p>カナ(名)
         <br>
          <?php
-        $errors = []; 
+        /*「送信する」ボタンから移動してきたときに赤文字でメッセージが出る*/
+       /* $errors = []; 
         if(empty($_POST['first_name2'])){
             $errors[]="<font color='red'>カナ（名）が未入力です。</font>";
         }
@@ -112,16 +129,29 @@
             foreach($errors as $error){
                 echo $error;
             }
-        }else{
+        }else{*/
             echo $_POST['first_name2'];
-        }
+       /* }*/
         ?>
     </p>
+    <!-- 「登録する」を押したときに空白だった場合、エラーメッセージ「カナ（名）が未入力です。」と赤字でメッセージを出す-->
+    <!--<p id="validate_msg" style="color: red;"></p>
+        <script>
+            function testCheck(){
+                var test4 = document.getElementById("test4").value;
+                if(test4.length = []){
+                    var validate = "カナ（名）が未入力です。";
+                    document.getElementById("validate_msg").innerHTML = validate; 
+                    return false; 
+                }
+            }
+        </script>-->
         
     <p>メールアドレス
         <br>
          <?php
-        $errors = []; 
+        /*「送信する」ボタンから移動してきたときに赤文字でメッセージが出る*/
+        /*$errors = []; 
         if(empty($_POST['mail'])){
             $errors[]="<font color='red'>メールアドレスが未入力です。</font>";
         }
@@ -129,16 +159,29 @@
             foreach($errors as $error){
                 echo $error;
             }
-        }else{
+        }else{*/
             echo $_POST['mail'];
-        }
+        /*}*/
         ?>
     </p>
+    <!-- 「登録する」を押したときに空白だった場合、エラーメッセージ「メールアドレスが未入力です。」と赤字でメッセージを出す-->
+   <!-- <p id="validate_msg" style="color: red;"></p>
+        <script>
+            function testCheck(){
+                var test5 = document.getElementById("test5").value;
+                if(test5.length = []){
+                    var validate = "メールアドレスが未入力です。";
+                    document.getElementById("validate_msg").innerHTML = validate; 
+                    return false; 
+                }
+            }
+        </script>-->
     
     <p>パスワード
         <br>
         <?php
-        $errors = []; 
+        /*「送信する」ボタンから移動してきたときに赤文字でメッセージが出る*/
+/*        $errors = []; 
         if(empty($_POST['password'])){
             $errors[]="<font color='red'>パスワードが未入力です。</font>";
         }
@@ -146,12 +189,24 @@
             foreach($errors as $error){
                 echo $error;
             }
-        }else{
+        }else{*/
             echo $_POST['password'];
-        }
+        /*}*/
         ?>
     </p>
-        
+    <!-- 「登録する」を押したときに空白だった場合、エラーメッセージ「パスワードが未入力です。」と赤字でメッセージを出す-->
+   <!-- <p id="validate_msg" style="color: red;"></p>
+        <script>
+            function testCheck(){
+                var test6 = document.getElementById("test6").value;
+                if(test6.length = []){
+                    var validate = "パスワードが未入力です。";
+                    document.getElementById("validate_msg").innerHTML = validate; 
+                    return false; 
+                }
+            }
+        </script>
+        -->
     <p>性別
         <br>
         <?php echo $_POST['sex'];?>
@@ -160,7 +215,8 @@
     <p>郵便番号
         <br>
          <?php
-        $errors = []; 
+        /*「送信する」ボタンから移動してきたときに赤文字でメッセージが出る*/
+       /* $errors = []; 
         if(empty($_POST['post_code'])){
             $errors[]="<font color='red'>郵便番号が未入力です。</font>";
         }
@@ -168,16 +224,29 @@
             foreach($errors as $error){
                 echo $error;
             }
-        }else{
+        }else{*/
             echo $_POST['post_code'];
-        }
+        /*}*/
         ?>
     </p>
-    
+    <!-- 「登録する」を押したときに空白だった場合、エラーメッセージ「郵便番号が未入力です。」と赤字でメッセージを出す-->
+   <!-- <p id="validate_msg" style="color: red;"></p>
+        <script>
+            function testCheck(){
+                var test7 = document.getElementById("test7").value;
+                if(test7.length = []){
+                    var validate = "郵便番号が未入力です。";
+                    document.getElementById("validate_msg").innerHTML = validate; 
+                    return false; 
+                }
+            }
+        </script>-->
+        
     <p>住所（都道府県）
         <br>
         <?php
-        $errors = []; 
+        /*「送信する」ボタンから移動してきたときに赤文字でメッセージが出る*/
+        /*$errors = []; 
         if(empty($_POST['address1'])){
             $errors[]="<font color='red'>住所（都道府県）が未入力です。</font>";
         }
@@ -185,16 +254,29 @@
             foreach($errors as $error){
                 echo $error;
             }
-        }else{
+        }else{*/
             echo $_POST['address1'];
-        }
+       /* }*/
         ?>
-    </p> 
+    </p>
+    <!-- 「登録する」を押したときに空白だった場合、エラーメッセージ「都道府県が未選択です。」と赤字でメッセージを出す-->
+    <!--<p id="validate_msg" style="color: red;"></p>
+        <script>
+            function testCheck(){
+                var test8 = document.getElementById("test8").value;
+                if(test8.length = []){
+                    var validate = "都道府県が未選択です。";
+                    document.getElementById("validate_msg").innerHTML = validate; 
+                    return false; 
+                }
+            }
+        </script>-->
     
     <p>住所（市区町村）
         <br>
          <?php
-        $errors = []; 
+        /*「送信する」ボタンから移動してきたときに赤文字でメッセージが出る*/
+        /*$errors = []; 
         if(empty($_POST['address2'])){
             $errors[]="<font color='red'>住所（市区町村）が未入力です。</font>";
         }
@@ -202,16 +284,29 @@
             foreach($errors as $error){
                 echo $error;
             }
-        }else{
+        }else{*/
             echo $_POST['address2'];
-        }
+       /* }*/
         ?>
     </p>
+    <!-- 「登録する」を押したときに空白だった場合、エラーメッセージ「住所（市区町村）が未入力です。」と赤字でメッセージを出す-->
+    <!--<p id="validate_msg" style="color: red;"></p>
+        <script>
+            function testCheck(){
+                var test9 = document.getElementById("test9").value;
+                if(test9.length = []){
+                    var validate = "住所（市区町村）が未入力です。";
+                    document.getElementById("validate_msg").innerHTML = validate; 
+                    return false; 
+                }
+            }
+        </script>-->
     
       <p>住所（番地）
         <br>
          <?php
-        $errors = []; 
+          /*「送信する」ボタンから移動してきたときに赤文字でメッセージが出る*/
+        /*$errors = []; 
         if(empty($_POST['address3'])){
             $errors[]="<font color='red'>住所（番地）が未入力です。</font>";
         }
@@ -219,11 +314,23 @@
             foreach($errors as $error){
                 echo $error;
             }
-        }else{
+        }else{*/
             echo $_POST['address3'];
-        }
+       /* }*/
         ?>
-    </p> 
+    </p>
+    <!-- 「登録する」を押したときに空白だった場合、エラーメッセージ「住所（番地）が未入力です。」と赤字でメッセージを出す-->
+   <!-- <p id="validate_msg" style="color: red;"></p>
+        <script>
+            function testCheck(){
+                var test10 = document.getElementById("test10").value;
+                if(test10.length = []){
+                    var validate = "住所（番地）が未入力です。";
+                    document.getElementById("validate_msg").innerHTML = validate; 
+                    return false; 
+                }
+            }
+        </script>-->
     
       <p>アカウント制限
         <br>
@@ -249,16 +356,16 @@
             
             <form name="form" action="insert.php"method="post">
                 <input type = "hidden" id="test1" value = "<?php echo $_POST['last_name'];?>" name = "last_name">
-                <input type = "hidden" value = "<?php echo $_POST['first_name'];?>" name = "first_name">
-                <input type = "hidden" value = "<?php echo $_POST['last_name2'];?>" name = "last_name2">
-                <input type = "hidden" value = "<?php echo $_POST['first_name2'];?>" name = "first_name2">
-                <input type = "hidden" value = "<?php echo $_POST['mail'];?>" name = "mail">
-                <input type = "hidden" value = "<?php echo $_POST['password'];?>" name = "password">
+                <input type = "hidden" id="test2" value = "<?php echo $_POST['first_name'];?>" name = "first_name">
+                <input type = "hidden" id="test3" value = "<?php echo $_POST['last_name2'];?>" name = "last_name2">
+                <input type = "hidden" id="test4" value = "<?php echo $_POST['first_name2'];?>" name = "first_name2">
+                <input type = "hidden" id="test5" value = "<?php echo $_POST['mail'];?>" name = "mail">
+                <input type = "hidden" id="test6" value = "<?php echo $_POST['password'];?>" name = "password">
                 <input type = "hidden" value = "<?php echo $_POST['sex'];?>" name = "sex">
-                <input type = "hidden" value = "<?php echo $_POST['post_code'];?>" name = "post_code">
-                <input type = "hidden" value = "<?php echo $_POST['address1'];?>" name = "address1">
-                <input type = "hidden" value = "<?php echo $_POST['address2'];?>" name = "address2">
-                <input type = "hidden" value = "<?php echo $_POST['address3'];?>" name = "address3">
+                <input type = "hidden" id="test7" value = "<?php echo $_POST['post_code'];?>" name = "post_code">
+                <input type = "hidden" id="test8"value = "<?php echo $_POST['address1'];?>" name = "address1">
+                <input type = "hidden" id="test9" value = "<?php echo $_POST['address2'];?>" name = "address2">
+                <input type = "hidden" id="test10" value = "<?php echo $_POST['address3'];?>" name = "address3">
                 <input type = "hidden" value = "<?php echo $_POST['account'];?>" name = "account">
                 
                  <input type="submit"class="button2" onclick="return testCheck()" value="登録する">
