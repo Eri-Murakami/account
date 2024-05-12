@@ -84,13 +84,13 @@
         ?>
     </p>
     <!-- 「登録する」を押したときに空白だった場合、エラーメッセージ「名前（名）が未入力です。」と赤字でメッセージを出す-->
-    <p id="validate_msg" style="color: red;"></p>
+    <p id="validate_msg2" style="color: red;"></p>
         <script>
             function testCheck(){
                 var test2 = document.getElementById("test2").value;
                 if(test2.length = []){
                     var validate = "名前（名）が未入力です。";
-                    document.getElementById("validate_msg").innerHTML = validate; 
+                    document.getElementById("validate_msg2").innerHTML = validate; 
                     return false; 
                 }
             }
@@ -110,11 +110,23 @@
                 echo $error;
             }
         }else{*/
-            echo $_POST['last_name'];
+            echo $_POST['last_name2'];
        /* }*/
         ?>
     </p>
     <!-- 「登録する」を押したときに空白だった場合、エラーメッセージ「カナ（性）が未入力です。」と赤字でメッセージを出す-->
+        <p id="validate_msg3" style="color: red;"></p>
+        <script>
+            function testCheck(){
+                var test2 = document.getElementById("test2").value;
+                if(test2.length = []){
+                    var validate = "カナ（性）が未入力です。";
+                    document.getElementById("validate_msg3").innerHTML = validate; 
+                    return false; 
+                }
+            }
+        </script>
+        
    <!---->
         
     <p>カナ(名)
