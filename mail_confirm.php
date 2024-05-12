@@ -6,14 +6,15 @@
     <title>お問い合わせフォームを作る</title>
     <link rel="stylesheet" type="text/css" href="mail_confirm%20style.css">
     
-    <script language="JavaScript">
+    <!--「登録」ボタンを押したときにアラートを出す-->
+    <!--<script language="JavaScript">
         function check(){
             if(document.form.last_name.value == ""){
                 alert("名前（性）が未入力です。");
                 return false;
             }
         }
-    </script>
+    </script>-->
     
 </head>
     <body>
@@ -36,6 +37,7 @@
     <p>名前(性)
         <br>
         <?php
+        /*「送信する」ボタンから移動してきたときに赤文字でメッセージが出る*/
        /* $errors = []; 
         if(empty($_POST['last_name'])){
             $errors[]="<font color='red'>名前（性）が未入力です。</font>";
@@ -49,6 +51,20 @@
         /*}*/
         ?>
     </p>
+        
+       <!-- 「登録する」を押したときに空白だった場合、エラーメッセージ「名前（性）が未入力です。」と赤字でメッセージを出す-->
+    <p id="validate_msg" style="color: red;"></p>
+        <script>
+            function testCheck(){
+                var test1 = document.getElementById("test1").value;
+                if(test1.length = []){
+                    var validate = "名前（性）が未入力です。";
+                    document.getElementById("validate_msg").innerHTML = validate; 
+                    return false; 
+                }
+            }
+        </script>
+    
         
     <p>名前(名)
         <br>
@@ -66,6 +82,7 @@
         }
         ?>
     </p>
+        
     
     <p>カナ（性）
         <br>
@@ -231,8 +248,7 @@
             </form>
             
             <form name="form" action="insert.php"method="post">
-                <input type="submit"class="button2"value="登録する">
-                <input type = "hidden" value = "<?php echo $_POST['last_name'];?>" name = "last_name">
+                <input type = "hidden" id="test1" value = "<?php echo $_POST['last_name'];?>" name = "last_name">
                 <input type = "hidden" value = "<?php echo $_POST['first_name'];?>" name = "first_name">
                 <input type = "hidden" value = "<?php echo $_POST['last_name2'];?>" name = "last_name2">
                 <input type = "hidden" value = "<?php echo $_POST['first_name2'];?>" name = "first_name2">
@@ -244,7 +260,13 @@
                 <input type = "hidden" value = "<?php echo $_POST['address2'];?>" name = "address2">
                 <input type = "hidden" value = "<?php echo $_POST['address3'];?>" name = "address3">
                 <input type = "hidden" value = "<?php echo $_POST['account'];?>" name = "account">
+                
+                 <input type="submit"class="button2" onclick="return testCheck()" value="登録する">
+               
             </form>
+            
+         
+
         </div>
        
     </div>
