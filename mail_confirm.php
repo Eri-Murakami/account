@@ -5,6 +5,16 @@
     <meta charet="utf-8">
     <title>お問い合わせフォームを作る</title>
     <link rel="stylesheet" type="text/css" href="mail_confirm%20style.css">
+    
+    <script language="JavaScript">
+        function check(){
+            if(document.form.last_name.value == ""){
+                alert("名前（性）が未入力です。");
+                return false;
+            }
+        }
+    </script>
+    
 </head>
     <body>
         <img src="diblog_logo.jpg"width=20%> 
@@ -26,7 +36,7 @@
     <p>名前(性)
         <br>
         <?php
-        $errors = []; 
+       /* $errors = []; 
         if(empty($_POST['last_name'])){
             $errors[]="<font color='red'>名前（性）が未入力です。</font>";
         }
@@ -34,9 +44,9 @@
             foreach($errors as $error){
                 echo $error;
             }
-        }else{
+        }else{*/
             echo $_POST['last_name'];
-        }
+        /*}*/
         ?>
     </p>
         
@@ -220,7 +230,7 @@
                 <input type = "hidden" value = "<?php echo $_POST['account'];?>" name="account">
             </form>
             
-            <form action="insert.php"method="post">
+            <form name="form" action="insert.php"method="post">
                 <input type="submit"class="button2"value="登録する">
                 <input type = "hidden" value = "<?php echo $_POST['last_name'];?>" name = "last_name">
                 <input type = "hidden" value = "<?php echo $_POST['first_name'];?>" name = "first_name">
