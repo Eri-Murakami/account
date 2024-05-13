@@ -56,7 +56,7 @@
             
              <div>
                 <label>パスワード</label><br><!--　最大10文字　/　初期値空白　/　半角英数字　-->
-                <input type="password"class="text"size="10"name="password"maxlength="10"pattern="^[a-zA-Z-9]+$^">
+                <input type="password"class="text"size="10"name="password"maxlength="10"pattern="^[0-9A-Za-z]+$">
                  <!--目のアイコンをつけてパスワードを表示する-->
                 <!--<i id="eye" class="fa-solid fa-eye"></i>
                  <script>
@@ -151,6 +151,7 @@
              <div>
                 <label>住所（番地）</label><br>
                  <!--　　最大100文字　/　初期値空白　/　ひらがな、漢字、数字、カタカナ、記号(ハイフンとスペース)のみ　-->
+                <!-- スペースのみでも送信できてしまう-->
                 <input type="text"class="text"size="35"name="address3"maxlength="100"pattern="^[ぁ-んァ-ヶｱ-ﾝﾞﾟ一-龠\-\s\0-9]*$">
             </div>
             

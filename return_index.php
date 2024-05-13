@@ -81,7 +81,7 @@
             
              <div>
                 <label>パスワード</label><br><!--　最大10文字　/　初期値空白　/　半角英数字　-->
-                <input type="password"class="text"size="10"name="password"maxlength="10"pattern="^[a-zA-Z-9]+$^"
+                <input type="password"class="text"size="10"name="password"maxlength="10"pattern="^[0-9A-Za-z]+$"
                        value="<?php 
                               if(!empty($_POST['password'])){
                                   echo $_POST['password'];

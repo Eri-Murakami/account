@@ -51,15 +51,18 @@
         /*}*/
         ?>
     </p>
+    <!--getElementById …　任意のHTMLタグで指定したIDにマッチするドキュメント要素を取得するメゾット-->
+    <!--validate …　立証する，正しいことを証明する，認証する，確認する-->
+    <!-- innerHTML　…　HTML要素の中身を変更するのに活躍するプロパティ-->
         
     <!-- 「登録する」を押したときに空白だった場合、エラーメッセージ「名前（性）が未入力です。」と赤字でメッセージを出す-->
-    <p id="validate_msg" style="color: red;"></p>
+    <p id="validate_msg1" style="color: red;"></p>
         <script>
             function testCheck(){
                 var test1 = document.getElementById("test1").value;
-                if(test1.length = []){
+                if(test1 ==''){
                     var validate = "名前（性）が未入力です。";
-                    document.getElementById("validate_msg").innerHTML = validate; 
+                    document.getElementById("validate_msg1").innerHTML = validate; 
                     return false; 
                 }
             }
@@ -88,7 +91,7 @@
         <script>
             function testCheck(){
                 var test2 = document.getElementById("test2").value;
-                if(test2.length = []){
+                if(test2 ==''){
                     var validate = "名前（名）が未入力です。";
                     document.getElementById("validate_msg2").innerHTML = validate; 
                     return false; 
@@ -115,17 +118,17 @@
         ?>
     </p>
     <!-- 「登録する」を押したときに空白だった場合、エラーメッセージ「カナ（性）が未入力です。」と赤字でメッセージを出す-->
-        <p id="validate_msg3" style="color: red;"></p>
+        <!--<p id="validate_msg3" style="color: red;"></p>
         <script>
             function testCheck(){
-                var test2 = document.getElementById("test2").value;
-                if(test2.length = []){
+                var test3 = document.getElementById("test3").value;
+                if(test3.length ==''){
                     var validate = "カナ（性）が未入力です。";
                     document.getElementById("validate_msg3").innerHTML = validate; 
                     return false; 
                 }
             }
-        </script>
+        </script>-->
         
    <!---->
         
@@ -147,13 +150,13 @@
         ?>
     </p>
     <!-- 「登録する」を押したときに空白だった場合、エラーメッセージ「カナ（名）が未入力です。」と赤字でメッセージを出す-->
-    <!--<p id="validate_msg" style="color: red;"></p>
+    <!--<p id="validate_msg4" style="color: red;"></p>
         <script>
             function testCheck(){
                 var test4 = document.getElementById("test4").value;
-                if(test4.length = []){
+                if(test4.length ==''){
                     var validate = "カナ（名）が未入力です。";
-                    document.getElementById("validate_msg").innerHTML = validate; 
+                    document.getElementById("validate_msg4").innerHTML = validate; 
                     return false; 
                 }
             }
@@ -177,13 +180,13 @@
         ?>
     </p>
     <!-- 「登録する」を押したときに空白だった場合、エラーメッセージ「メールアドレスが未入力です。」と赤字でメッセージを出す-->
-   <!-- <p id="validate_msg" style="color: red;"></p>
+   <!-- <p id="validate_msg5" style="color: red;"></p>
         <script>
             function testCheck(){
                 var test5 = document.getElementById("test5").value;
-                if(test5.length = []){
+                if(test5.length ==''){
                     var validate = "メールアドレスが未入力です。";
-                    document.getElementById("validate_msg").innerHTML = validate; 
+                    document.getElementById("validate_msg5").innerHTML = validate; 
                     return false; 
                 }
             }
@@ -207,13 +210,13 @@
         ?>
     </p>
     <!-- 「登録する」を押したときに空白だった場合、エラーメッセージ「パスワードが未入力です。」と赤字でメッセージを出す-->
-   <!-- <p id="validate_msg" style="color: red;"></p>
+   <!-- <p id="validate_msg6" style="color: red;"></p>
         <script>
             function testCheck(){
                 var test6 = document.getElementById("test6").value;
-                if(test6.length = []){
+                if(test6.length ==''){
                     var validate = "パスワードが未入力です。";
-                    document.getElementById("validate_msg").innerHTML = validate; 
+                    document.getElementById("validate_msg6").innerHTML = validate; 
                     return false; 
                 }
             }
@@ -242,13 +245,13 @@
         ?>
     </p>
     <!-- 「登録する」を押したときに空白だった場合、エラーメッセージ「郵便番号が未入力です。」と赤字でメッセージを出す-->
-   <!-- <p id="validate_msg" style="color: red;"></p>
+   <!-- <p id="validate_msg7" style="color: red;"></p>
         <script>
             function testCheck(){
                 var test7 = document.getElementById("test7").value;
-                if(test7.length = []){
+                if(test7.length ==''){
                     var validate = "郵便番号が未入力です。";
-                    document.getElementById("validate_msg").innerHTML = validate; 
+                    document.getElementById("validate_msg7").innerHTML = validate; 
                     return false; 
                 }
             }
@@ -272,13 +275,13 @@
         ?>
     </p>
     <!-- 「登録する」を押したときに空白だった場合、エラーメッセージ「都道府県が未選択です。」と赤字でメッセージを出す-->
-    <!--<p id="validate_msg" style="color: red;"></p>
+    <!--<p id="validate_msg8" style="color: red;"></p>
         <script>
             function testCheck(){
                 var test8 = document.getElementById("test8").value;
-                if(test8.length = []){
+                if(test8.length ==''){
                     var validate = "都道府県が未選択です。";
-                    document.getElementById("validate_msg").innerHTML = validate; 
+                    document.getElementById("validate_msg8").innerHTML = validate; 
                     return false; 
                 }
             }
@@ -302,13 +305,13 @@
         ?>
     </p>
     <!-- 「登録する」を押したときに空白だった場合、エラーメッセージ「住所（市区町村）が未入力です。」と赤字でメッセージを出す-->
-    <!--<p id="validate_msg" style="color: red;"></p>
+    <!--<p id="validate_msg9" style="color: red;"></p>
         <script>
             function testCheck(){
                 var test9 = document.getElementById("test9").value;
-                if(test9.length = []){
+                if(test9.length ==''){
                     var validate = "住所（市区町村）が未入力です。";
-                    document.getElementById("validate_msg").innerHTML = validate; 
+                    document.getElementById("validate_msg9").innerHTML = validate; 
                     return false; 
                 }
             }
@@ -332,13 +335,13 @@
         ?>
     </p>
     <!-- 「登録する」を押したときに空白だった場合、エラーメッセージ「住所（番地）が未入力です。」と赤字でメッセージを出す-->
-   <!-- <p id="validate_msg" style="color: red;"></p>
+   <!-- <p id="validate_msg10" style="color: red;"></p>
         <script>
             function testCheck(){
                 var test10 = document.getElementById("test10").value;
-                if(test10.length = []){
+                if(test10.length ==''){
                     var validate = "住所（番地）が未入力です。";
-                    document.getElementById("validate_msg").innerHTML = validate; 
+                    document.getElementById("validate_msg10").innerHTML = validate; 
                     return false; 
                 }
             }
@@ -380,7 +383,8 @@
                 <input type = "hidden" id="test10" value = "<?php echo $_POST['address3'];?>" name = "address3">
                 <input type = "hidden" value = "<?php echo $_POST['account'];?>" name = "account">
                 
-                 <input type="submit"class="button2" onclick="return testCheck()" value="登録する">
+                <!--onclick …　要素がクリックされた際に発生するイベントの処理を設定するための属性--> 
+                <input type="submit"class="button2" onclick="return testCheck()" value="登録する">
                
             </form>
             
