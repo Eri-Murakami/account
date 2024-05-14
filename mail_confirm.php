@@ -63,13 +63,13 @@
             }
                     
                     function testCheck1(){
-                        test1 = testCheck();
-                        if(test1.length == ''){
-                            var validate = "名前（性）が未入力です。";
-                            document.getElementById("validate_msg1").innerHTML = validate;
-                            return false;
-                }
-            }
+                        let test1 = testCheck();
+                        if(!test1 == ''){
+                        document.write("名前（性）が未入力です。");
+                        document.getElementById("validate_msg1").innerHTML = validate;
+                    }
+                        testCheck1();
+            
         </script>
         
     
