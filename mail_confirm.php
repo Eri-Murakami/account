@@ -56,17 +56,22 @@
     <!-- innerHTML　…　HTML要素の中身を変更するのに活躍するプロパティ-->
         
     <!-- 「登録する」を押したときに空白だった場合、エラーメッセージ「名前（性）が未入力です。」と赤字でメッセージを出す-->
-    <p id="validate_msg1" style="color: red;"></p>
+    <p id="validate_msg2" style="color: red;"></p>
         <script>
             function testCheck(){
-                var test1 = document.getElementById("test1").value;
-                if(test1 ==''){
-                    var validate = "名前（性）が未入力です。";
-                    document.getElementById("validate_msg1").innerHTML = validate; 
-                    return false; 
+                document.getElementById("test1").value;
+            }
+                    
+                    function testCheck1(){
+                        test1 = testCheck();
+                        if(test1.length == ''){
+                            var validate = "名前（性）が未入力です。";
+                            document.getElementById("validate_msg1").innerHTML = validate;
+                            return false;
                 }
             }
         </script>
+        
     
         
     <p>名前(名)
@@ -87,17 +92,19 @@
         ?>
     </p>
     <!-- 「登録する」を押したときに空白だった場合、エラーメッセージ「名前（名）が未入力です。」と赤字でメッセージを出す-->
-    <p id="validate_msg2" style="color: red;"></p>
+    <!--<p id="validate_msg2" style="color: red;"></p>
         <script>
             function testCheck(){
                 var test2 = document.getElementById("test2").value;
-                if(test2 ==''){
+                if(test2.length ==''){
                     var validate = "名前（名）が未入力です。";
                     document.getElementById("validate_msg2").innerHTML = validate; 
                     return false; 
                 }
             }
-        </script>
+        </script>-->
+        
+   <!---->
         
     
     <p>カナ（性）

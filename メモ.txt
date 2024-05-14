@@ -1,0 +1,28 @@
+process.stdin.resume();
+process.stdin.setEncoding('utf8');
+// Your code here!
+
+// console.log("XXXXXXXX")
+
+function test1() {
+    console.log(1);
+    return false;
+}
+
+function test2() {
+    console.log(2);
+    return false;
+}
+
+function test() {
+    let ret1 = test1();
+    let ret2 = test2();
+    if (ret1 == true || ret2 == true) {
+        console.log(true);
+    } else {
+        console.log(false);
+    }
+}
+
+test();
+
