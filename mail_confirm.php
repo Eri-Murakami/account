@@ -61,14 +61,15 @@
             function testCheck(){
                 document.getElementById("test1").value;
             }
-                    
-                    function testCheck1(){
-                        let test1 = testCheck();
-                        if(!test1 == ''){
-                        document.write("名前（性）が未入力です。");
-                        document.getElementById("validate_msg1").innerHTML = validate;
+            
+            function testCheck1(){
+                var test1 = testCheck();
+                if(test1.length == ''){
+                    var validate = "名前（性）が未入力です。";
+                    document.getElementById("validate_msg1").innerHTML = validate;
+                    return false; 
+                        }
                     }
-                        testCheck1();
             
         </script>
         
