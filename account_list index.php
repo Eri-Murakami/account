@@ -49,13 +49,14 @@
                 ?>
                 
                 <tr>
-                   <td></td>
                     <?php while($row = $stmt->fetch()){
+                        echo "<td>".$row['id']."<br>"."<td>";
                         echo "<td>".$row['last_name']."<br>"."<td>";
                        /* echo "<td>".$row['first_name']."<td>"
                         echo "<td>".$row['mail']."<td>";*/
                         }
                         ?>
+                    
                     <!--<td><?php while($row = $stmt->fetch()){echo $row['first_name'];}?></td>
                     <td><?php foreach($stmt as $row){echo $row['last_name2'];}?></td>
                     <td><?php foreach($stmt as $row){echo $row['first_name2'];}?></td>
