@@ -50,8 +50,13 @@
                 
                 <tr>
                    <td></td>
-                    <td><?php while($row = $stmt->fetch()){echo $row['last_name'];}?></td>
-                    <td><?php while($row = $stmt->fetch()){echo $row['first_name'];}?></td>
+                    <?php while($row = $stmt->fetch()){
+                        echo "<td>".$row['last_name']."<br>"."<td>";
+                       /* echo "<td>".$row['first_name']."<td>"
+                        echo "<td>".$row['mail']."<td>";*/
+                        }
+                        ?>
+                    <!--<td><?php while($row = $stmt->fetch()){echo $row['first_name'];}?></td>
                     <td><?php foreach($stmt as $row){echo $row['last_name2'];}?></td>
                     <td><?php foreach($stmt as $row){echo $row['first_name2'];}?></td>
                     <td><?php foreach($stmt as $row){echo $row['mail'];}?></td>
@@ -62,7 +67,7 @@
                     <td><?php foreach($stmt as $row){echo $row['datet'];}?></td>
                     <td> <input type="submit"class="button1"value="更新">
                          <input type="submit"class="button2"value="削除">
-                    </td>
+                    </td>-->
                 </tr>
        
         </table>
