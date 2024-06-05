@@ -47,7 +47,7 @@
                 echo $error;
             }
         }else{*/
-            echo $_POST['last_name'];
+            echo $_POST['family_name'];
         /*}*/
         ?>
     </p>
@@ -179,7 +179,7 @@
                 echo $error;
             }
         }else{*/
-            echo $_POST['first_name'];
+            echo $_POST['last_name'];
         /*}*/
         ?>
     </p>
@@ -212,7 +212,7 @@
                 echo $error;
             }
         }else{*/
-            echo $_POST['last_name2'];
+            echo $_POST['family_name_kana'];
        /* }*/
         ?>
     </p>
@@ -244,7 +244,7 @@
                 echo $error;
             }
         }else{*/
-            echo $_POST['first_name2'];
+            echo $_POST['last_name_kana'];
        /* }*/
         ?>
     </p>
@@ -323,7 +323,7 @@
         
     <p>性別
         <br>
-        <?php echo $_POST['sex'];?>
+        <?php echo $_POST['gender'];?>
     </p>
     
     <p>郵便番号
@@ -339,7 +339,7 @@
                 echo $error;
             }
         }else{*/
-            echo $_POST['post_code'];
+            echo $_POST['postal_code'];
         /*}*/
         ?>
     </p>
@@ -369,7 +369,7 @@
                 echo $error;
             }
         }else{*/
-            echo $_POST['address1'];
+            echo $_POST['prefecture'];
        /* }*/
         ?>
     </p>
@@ -399,7 +399,7 @@
                 echo $error;
             }
         }else{*/
-            echo $_POST['address2'];
+            echo $_POST['address_1'];
        /* }*/
         ?>
     </p>
@@ -429,7 +429,7 @@
                 echo $error;
             }
         }else{*/
-            echo $_POST['address3'];
+            echo $_POST['address_2'];
        /* }*/
         ?>
     </p>
@@ -448,39 +448,39 @@
     
       <p>アカウント制限
         <br>
-         <?php echo $_POST['account'];?>
+         <?php echo $_POST['authority'];?>
     </p> 
         
         <div class="button">
             <form action="return_index.php"method="post">
                 <input type="submit"class="button1"value="前に戻る">
-                 <input type = "hidden" value = "<?php echo $_POST['last_name'];?>" name="last_name">
-                <input type = "hidden" value = "<?php echo $_POST['first_name'];?>" name="first_name">
-                <input type = "hidden" value = "<?php echo $_POST['last_name2'];?>" name="last_name2">
-                <input type = "hidden" value = "<?php echo $_POST['first_name2'];?>" name="first_name2">
+                 <input type = "hidden" value = "<?php echo $_POST['family_name'];?>" name="family_name">
+                <input type = "hidden" value = "<?php echo $_POST['last_name'];?>" name="last_name">
+                <input type = "hidden" value = "<?php echo $_POST['family_name_kana'];?>" name="family_name_kana">
+                <input type = "hidden" value = "<?php echo $_POST['last_name_kana'];?>" name="last_name_kana">
                 <input type = "hidden" value = "<?php echo $_POST['mail'];?>" name="mail">
                 <input type = "hidden" value = "<?php echo $_POST['password'];?>" name="password">
-                <input type = "hidden" value = "<?php echo $_POST['sex'];?>" name="sex">
-                <input type = "hidden" value = "<?php echo $_POST['post_code'];?>" name="post_code">
-                <input type = "hidden" value = "<?php echo $_POST['address1'];?>" name="address1">
-                <input type = "hidden" value = "<?php echo $_POST['address2'];?>" name="address2">
-                <input type = "hidden" value = "<?php echo $_POST['address3'];?>" name="address3">
-                <input type = "hidden" value = "<?php echo $_POST['account'];?>" name="account">
+                <input type = "hidden" value = "<?php echo $_POST['gender'];?>" name="sex">
+                <input type = "hidden" value = "<?php echo $_POST['postal_code'];?>" name="post_code">
+                <input type = "hidden" value = "<?php echo $_POST['prefecture'];?>" name="aprefecture">
+                <input type = "hidden" value = "<?php echo $_POST['address_1'];?>" name="address_1">
+                <input type = "hidden" value = "<?php echo $_POST['address_2'];?>" name="address_2">
+                <input type = "hidden" value = "<?php echo $_POST['authority'];?>" name="authority">
             </form>
             
             <form name="form" action="insert.php"method="post">
-                <input type = "hidden" id="test1" value = "<?php echo $_POST['last_name'];?>" name = "last_name">
-                <input type = "hidden" id="test2" value = "<?php echo $_POST['first_name'];?>" name = "first_name">
-                <input type = "hidden" id="test3" value = "<?php echo $_POST['last_name2'];?>" name = "last_name2">
-                <input type = "hidden" id="test4" value = "<?php echo $_POST['first_name2'];?>" name = "first_name2">
+                <input type = "hidden" id="test1" value = "<?php echo $_POST['family_name'];?>" name = "family_name">
+                <input type = "hidden" id="test2" value = "<?php echo $_POST['last_name'];?>" name = "last_name">
+                <input type = "hidden" id="test3" value = "<?php echo $_POST['family_name_kana'];?>" name = "family_name_kana">
+                <input type = "hidden" id="test4" value = "<?php echo $_POST['last_name_kana'];?>" name = "last_name_kana">
                 <input type = "hidden" id="test5" value = "<?php echo $_POST['mail'];?>" name = "mail">
                 <input type = "hidden" id="test6" value = "<?php echo $_POST['password'];?>" name = "password">
-                <input type = "hidden" value = "<?php echo $_POST['sex'];?>" name = "sex">
-                <input type = "hidden" id="test7" value = "<?php echo $_POST['post_code'];?>" name = "post_code">
-                <input type = "hidden" id="test8"value = "<?php echo $_POST['address1'];?>" name = "address1">
-                <input type = "hidden" id="test9" value = "<?php echo $_POST['address2'];?>" name = "address2">
-                <input type = "hidden" id="test10" value = "<?php echo $_POST['address3'];?>" name = "address3">
-                <input type = "hidden" value = "<?php echo $_POST['account'];?>" name = "account">
+                <input type = "hidden" value = "<?php echo $_POST['gender'];?>" name = "gender">
+                <input type = "hidden" id="test7" value = "<?php echo $_POST['postal_code'];?>" name = "postal_code">
+                <input type = "hidden" id="test8"value = "<?php echo $_POST['prefecture'];?>" name = "prefecture">
+                <input type = "hidden" id="test9" value = "<?php echo $_POST['address_1'];?>" name = "address_1">
+                <input type = "hidden" id="test10" value = "<?php echo $_POST['address_2'];?>" name = "address_2">
+                <input type = "hidden" value = "<?php echo $_POST['authority'];?>" name = "authority">
                 
                 <!--onclick …　要素がクリックされた際に発生するイベントの処理を設定するための属性--> 
                 <input type="submit"class="button2" onclick="return testCheck();" value="登録する">

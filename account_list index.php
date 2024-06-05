@@ -24,8 +24,8 @@
          </header>
         
              <h1>アカウント一覧画面</h1>
-         <form method="post"action="account list insert.php">
-    
+         <!--<form method="post"action="account list insert.php">
+    -->
             <table border="1" cellspacing="0" cellpadding="5" align="center">
                 <tr bgcolor="#d3d3d3">
                     <td>ID</td>
@@ -48,28 +48,25 @@
                 $stmt = $pdo->query("select * from account");
                 ?>
                 
-                <tr>
+<!--                <tr>-->　<!--row　=　行-->
                     <?php while($row = $stmt->fetch()){
-                        echo "<td>".$row['id']."<br>"."<td>";
-                        echo "<td>".$row['last_name']."<br>"."<td>";
-                       /* echo "<td>".$row['first_name']."<td>"
-                        echo "<td>".$row['mail']."<td>";*/
+                        echo "<tr>";
+                        echo "<td>".$row['id']."<td>";
+                        echo "<td>".$row['family_name']."<td>";
+                        echo "<td>".$row['last_name']."<td>";
+                        echo "<td>".$row['family_name_kana']."<td>";
+                        echo "<td>".$row['last_name_kana']."<td>";
+                        echo "<td>".$row['mail']."<td>";
+                        echo "<td>".$row['authority']."<td>";
+                        echo "<td>".$row['delete_flag']."<td>";    
+                        echo "<td>".$row['registered_time']."<td>";
+                        echo "<td>".$row['update_time']."<td>";
+                        /*echo "<td>"."input type="submit"class="submit"value="確認する">"."<td>";*/
+                        echo "</tr>";
                         }
                         ?>
-                    
-                    <!--<td><?php while($row = $stmt->fetch()){echo $row['first_name'];}?></td>
-                    <td><?php foreach($stmt as $row){echo $row['last_name2'];}?></td>
-                    <td><?php foreach($stmt as $row){echo $row['first_name2'];}?></td>
-                    <td><?php foreach($stmt as $row){echo $row['mail'];}?></td>
-                    <td><?php foreach($stmt as $row){echo $row['sex'];}?></td>
-                    <td><?php foreach($stmt as $row){echo $row['account'];}?></td>
-                    <td></td>
-                    <td><?php foreach($stmt as $row){echo $row['times'];}?></td>
-                    <td><?php foreach($stmt as $row){echo $row['datet'];}?></td>
-                    <td> <input type="submit"class="button1"value="更新">
-                         <input type="submit"class="button2"value="削除">
-                    </td>-->
-                </tr>
+                <!--<form action="" method="post"><button type="submit" name="add">更新</button></form>-->
+                 <input type="submit"class="button1"value="更新"><input type="submit"class="button2"value="削除">
        
         </table>
         

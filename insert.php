@@ -2,8 +2,8 @@
 mb_internal_encoding("utf-8");
 $pdo = new PDO("mysql:dbname=account;host=localhost;","root","");
 
-$pdo->exec("insert into account(last_name,first_name,last_name2,first_name2,mail,password,sex,post_code,address1,address2,address3,account)
-values('".$_POST['last_name']."','".$_POST['first_name']."','".$_POST['last_name2']."','".$_POST['first_name2']."','".$_POST['mail']."','".$_POST['password']."','".$_POST['sex']."','".$_POST['post_code']."','".$_POST['address1']."','".$_POST['address2']."','".$_POST['address3']."','".$_POST['account']."');");
+$pdo->exec("insert into account(family_name,last_name,family_name_kasa,last_name_kana,mail,password,gender,postal_code,prefecture,address_1,address_2,authority)
+values('".$_POST['family_name']."','".$_POST['last_name']."','".$_POST['family_name_kana']."','".$_POST['last_name_kana']."','".$_POST['mail']."','".$_POST['password']."','".$_POST['gender']."','".$_POST['postal_code']."','".$_POST['prefecture']."','".$_POST['address_1']."','".$_POST['address_2']."','".$_POST['authority']."');");
 
 ?>
 
