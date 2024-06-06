@@ -20,17 +20,19 @@
             <li>登録フォーム</li>
             <li>問い合わせ</li>
             <li>その他</li>
-                <li> <a href="home%20index.html">アカウント登録</a></li>
+            <li> <a href="home%20index.html">アカウント登録</a></li>
+            <li> <a href="account_list%20index.php">アカウント一覧</a></li>
             </ul>
          </header>
     
         <h1>アカウント登録画面</h1>
         
-        <form method="post"action="mail_confirm.php"method="post">
+                <form method="post"action="http://localhost/account/mail_confirm.php">
+
            
             <div>
                 <label>名前（性）</label><br><!--　最大10文字　/　初期値空白　/　ひらがな、漢字のみ　-->
-                <input type="text"class="text"size="35"name="last_name"maxlength="10"pattern="^[ぁ-ん一-龠]*$"
+                <input type="text"class="text"size="35"name="family_name"maxlength="10"pattern="^[ぁ-ん一-龠]*$"
                        value="<?php 
                               if(!empty($_POST['family_name'])){
                                   echo $_POST['family_name'];
@@ -40,7 +42,7 @@
             
             <div>
                 <label>名前（名）</label><br><!--　最大10文字　/　初期値空白　/　ひらがな、漢字のみ　-->
-                <input type="text"class="text"size="35"name="first_name"maxlength="10"pattern="^[ぁ-ん一-龠]*$"
+                <input type="text"class="text"size="35"name="last_name"maxlength="10"pattern="^[ぁ-ん一-龠]*$"
                        value="<?php 
                               if(!empty($_POST['last_name'])){
                                   echo $_POST['last_name'];
@@ -50,7 +52,7 @@
             
             <div>
                 <label>カナ（性）</label><br><!--　最大10文字　/　初期値空白　/　カタカナのみ　-->
-                <input type="text"class="text"size="35"name="last_name2"maxlength="10"pattern="^[ァ-ヶｱ-ﾝﾞﾟ]+$"
+                <input type="text"class="text"size="35"name="family_name_kana"maxlength="10"pattern="^[ァ-ヶｱ-ﾝﾞﾟ]+$"
                        value="<?php 
                               if(!empty($_POST['family_name_kana'])){
                                   echo $_POST['family_name_kana'];
@@ -60,7 +62,7 @@
             
              <div>
                 <label>カナ（性）</label><br><!--　最大10文字　/　初期値空白　/　カタカナのみ　-->
-                <input type="text"class="text"size="35"name="first_name2"maxlength="10"pattern="^[ァ-ヶｱ-ﾝﾞﾟ]+$"
+                <input type="text"class="text"size="35"name="last_name_kana"maxlength="10"pattern="^[ァ-ヶｱ-ﾝﾞﾟ]+$"
                        value="<?php 
                               if(!empty($_POST['last_name_kana'])){
                                   echo $_POST['last_name_kana'];
@@ -108,9 +110,9 @@
             <div>
                 <label>性別</label><br><!--初期値「男」-->
                 <input type="radio" name="gender" value="男"
-                       <?php if (isset($_POST['sex'])&& $_POST['sex']=="男")echo 'checked';?>>男
+                       <?php if (isset($_POST['gender'])&& $_POST['gender']=="男")echo 'checked';?>>男
                 <input type="radio" name="gender" value="女"
-                        <?php if (isset($_POST['sex'])&& $_POST['sex']=="女")echo 'checked';?>>女
+                        <?php if (isset($_POST['gender'])&& $_POST['gender']=="女")echo 'checked';?>>女
             </div>
             
             
@@ -118,8 +120,8 @@
                 <label>郵便番号</label><br><!--　最大7文字　/　初期値空白　/　半角数字のみ-->
                 <input type="text"size="10"name="postal_code"maxlength="7"pattern="[0-9]+"
                        value="<?php 
-                              if(!empty($_POST['post_code'])){
-                                  echo $_POST['post_code'];
+                              if(!empty($_POST['postal_code'])){
+                                  echo $_POST['postal_code'];
                               }
                               ?>">
             </div>
@@ -205,7 +207,7 @@
             
             <div>
                 <label>アカウント制限</label><br><!--初期値「一般」-->
-                 <select name="account">
+                 <select name="authority">
                      <option value="一般" <?php if (isset($_POST['authority'])&& $_POST['authority']=="一般")echo 'selected';?>>一般</option>
                      <option value="管理者" <?php if (isset($_POST['authority'])&& $_POST['authority']=="管理者")echo 'selected';?>>管理者</option>
                  </select>

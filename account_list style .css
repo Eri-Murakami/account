@@ -40,8 +40,19 @@ h1{
    font-size: 40px;
 }
 
-table{
+/*account_list{
     text-align: center;
+    margin: auto;
+    width: 80%;
+    word-break:break-word;
+}*/
+
+table{
+    width:100%;
+}
+
+th,td{
+    display : block;
 }
 
 footer{

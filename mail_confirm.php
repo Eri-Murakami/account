@@ -27,7 +27,8 @@
             <li>登録フォーム</li>
             <li>問い合わせ</li>
             <li>その他</li>
-                <li> <a href="home%20index.html">アカウント登録</a></li>
+            <li> <a href="home%20index.html">アカウント登録</a></li>
+            <li> <a href="account_list%20index.php">アカウント一覧</a></li>
             </ul>
          </header>
     
@@ -452,7 +453,7 @@
     </p> 
         
         <div class="button">
-            <form action="return_index.php"method="post">
+            <form action="return_index.ph"method="post">
                 <input type="submit"class="button1"value="前に戻る">
                  <input type = "hidden" value = "<?php echo $_POST['family_name'];?>" name="family_name">
                 <input type = "hidden" value = "<?php echo $_POST['last_name'];?>" name="last_name">
@@ -460,7 +461,7 @@
                 <input type = "hidden" value = "<?php echo $_POST['last_name_kana'];?>" name="last_name_kana">
                 <input type = "hidden" value = "<?php echo $_POST['mail'];?>" name="mail">
                 <input type = "hidden" value = "<?php echo $_POST['password'];?>" name="password">
-                <input type = "hidden" value = "<?php echo $_POST['gender'];?>" name="sex">
+                <input type = "hidden" value = "<?php echo $_POST['gender'];?>" name="gender">
                 <input type = "hidden" value = "<?php echo $_POST['postal_code'];?>" name="post_code">
                 <input type = "hidden" value = "<?php echo $_POST['prefecture'];?>" name="aprefecture">
                 <input type = "hidden" value = "<?php echo $_POST['address_1'];?>" name="address_1">
@@ -481,7 +482,8 @@
                 <input type = "hidden" id="test9" value = "<?php echo $_POST['address_1'];?>" name = "address_1">
                 <input type = "hidden" id="test10" value = "<?php echo $_POST['address_2'];?>" name = "address_2">
                 <input type = "hidden" value = "<?php echo $_POST['authority'];?>" name = "authority">
-                
+                <!--<input type = "hidden" value = "<?php $delete_flag[0]="有効";$delete_flag[1]="無効";?>"name = "delete_flag">-->
+            
                 <!--onclick …　要素がクリックされた際に発生するイベントの処理を設定するための属性--> 
                 <input type="submit"class="button2" onclick="return testCheck();" value="登録する">
                
