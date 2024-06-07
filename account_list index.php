@@ -26,29 +26,28 @@
              <h1>アカウント一覧画面</h1>
          <!--<form method="post"action="account list insert.php">
     -->
-            <table border="1" cellspacing="0" cellpadding="5" align="center" class="account_list">
+            <table border="1" cellspacing="0" cellpadding="5" align="center">
                 <tr bgcolor="#d3d3d3">
-                    <th>ID</th>
-                    <th>名前（性）</th>
-                    <th>名前（名）</th>
-                    <th>カナ（性）</th>
-                    <th>カナ（名）</th>
-                    <th>メールアドレス</th>
-                    <th>性別</th>
-                    <th>アカウント制限</th>
-                    <th>削除フラグ</th>
-                    <th>登録日時</th>
-                    <th>更新日時</th>
-                    <th colspan="2">操作</th>
+                    <td>ID</td>
+                    <td>名前（性）</td>
+                    <td>名前（名）</td>
+                    <td>カナ（性）</td>
+                    <td>カナ（名）</td>
+                    <td>メールアドレス</td>
+                    <td>性別</td>
+                    <td>アカウント制限</td>
+                    <td>削除フラグ</td>
+                    <td>登録日時</td>
+                    <td>更新日時</td>
+                    <td>操作</td>
                 </tr>
-                
                 <?php
                 mb_internal_encoding("utf8");
                 $pdo = new PDO("mysql:dbname=account;host=localhost;","root","");
                 $stmt = $pdo->query("select * from account ORDER BY id DESC");
                 ?>
                 
-<!--                <tr>-->　<!--row　=　行-->
+                <!--row　=　行-->
                     <?php while($row=$stmt->fetch()){
                         echo "<tr>";
                         echo "<td>".$row['id']."</td>";
@@ -68,13 +67,14 @@
                         echo "</tr>";
                         }
                         ?>
+                       </table>
                 
-                <!--ボタン表示-->
+               <!-- ボタン表示-->
                 <form action="" method="post"><button type="submit" name="add">更新</button></form>
                 <input type="submit"class="button1"value="更新"><input type="submit"class="button2"value="削除">
-                <input type="button" id="foobtn" value="更新"/>
+                <input type="button" id="botton" value="更新"/>
        
-        </table>
+   
         
         <footer>
             Copyright D.I.works｜ D.I blog is the one which provides A to Z about programming
