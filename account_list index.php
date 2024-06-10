@@ -41,6 +41,9 @@
                     <th>更新日時</th>
                     <th>操作</th>
                 </tr>
+                
+                          
+                
                 <?php
                 mb_internal_encoding("utf8");
                 $pdo = new PDO("mysql:dbname=account;host=localhost;","root","");
@@ -61,19 +64,40 @@
                         echo "<td>".$row['delete_flag']."</td>";    
                         echo "<td>".$row['registered_time']."</td>";
                         echo "<td>".$row['update_time']."</td>";
+                         /*echo "<td>".."</td>";*/
                         /*echo "<td>"."<input type="submit"class="button1"value="更新">"."<td>";*/
                         /*echo "<td>"."<input type="button" id="foobtn" value="更新"/>"."</td>";*/
-                        /* echo "<td>".."</td>";*/
-                       /* echo "<td>".."</td>";*/
+                       /* echo "<td>".<div class="button"><form action="return_index.ph"method="post"><input type="submit"class="button1"value="前に戻る"></form>."</td>";*/
+                         
                         echo "</tr>";
                         }
                         ?>
-                       </table>
+                
+               
+                
+             <!-- /*  テーブルの中にボタンを表示させる*/-->
+                        <td><div class="button">
+                        <form action="return_index.ph"method="post">
+                        <input type="submit"class="button1"value="更新"></form></td>
+                </table>
+        
+       <!-- パラメーターが　1＝有効、0＝無効-->
+         <?php
+                if($delete_flag == 0){
+                    echo "有効";}
+                else{
+                    echo "無効";}
+        ?>
+                
                 
                <!-- ボタン表示-->
+         <div class="button">
+            <form action="return_index.ph"method="post">
+                <input type="submit"class="button1"value="前に戻る"></form>
+             
                 <form action="" method="post"><button type="submit" name="add">更新</button></form>
                 <input type="submit"class="button1"value="更新"><input type="submit"class="button2"value="削除">
-                <input type="button" id="botton" value="更新"/>
+             <input type="button" id="botton" value="更新"/></div>
        
    
         
