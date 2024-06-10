@@ -28,18 +28,18 @@
     -->
             <table border="1" cellspacing="0" cellpadding="5" align="center">
                 <tr bgcolor="#d3d3d3">
-                    <td>ID</td>
-                    <td>名前（性）</td>
-                    <td>名前（名）</td>
-                    <td>カナ（性）</td>
-                    <td>カナ（名）</td>
-                    <td>メールアドレス</td>
-                    <td>性別</td>
-                    <td>アカウント制限</td>
-                    <td>削除フラグ</td>
-                    <td>登録日時</td>
-                    <td>更新日時</td>
-                    <td>操作</td>
+                    <th>ID</th>
+                    <th>名前（性）</th>
+                    <th>名前（名）</th>
+                    <th>カナ（性）</th>
+                    <th>カナ（名）</th>
+                    <th>メールアドレス</th>
+                    <th>性別</th>
+                    <th>アカウント制限</th>
+                    <th>削除フラグ</th>
+                    <th>登録日時</th>
+                    <th>更新日時</th>
+                    <th>操作</th>
                 </tr>
                 <?php
                 mb_internal_encoding("utf8");
@@ -63,6 +63,7 @@
                         echo "<td>".$row['update_time']."</td>";
                         /*echo "<td>"."<input type="submit"class="button1"value="更新">"."<td>";*/
                         /*echo "<td>"."<input type="button" id="foobtn" value="更新"/>"."</td>";*/
+                        /* echo "<td>".."</td>";*/
                        /* echo "<td>".."</td>";*/
                         echo "</tr>";
                         }
