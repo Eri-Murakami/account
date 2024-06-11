@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <title>お問い合わせフォームを作る</title>
-        <link rel="stylesheet"type="text/css"href="home%20style.css">
+        <link rel="stylesheet"type="text/css"href="regist%20style.css">
         <!--目のアイコンをつけてパスワードを表示する-->
         <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
     </head>
@@ -20,14 +20,14 @@
             <li>登録フォーム</li>
             <li>問い合わせ</li>
             <li>その他</li>
-            <li> <a href="home%20index.html">アカウント登録</a></li>
-            <li> <a href="account_list%20index.php">アカウント一覧</a></li>
+            <li> <a href="regist.php">アカウント登録</a></li>
+            <li> <a href="list.php">アカウント一覧</a></li>
             </ul>
          </header>
     
         <h1>アカウント登録画面</h1>
         
-                <form method="post"action="http://localhost/account/mail_confirm.php">
+                <form method="post"action="http://localhost/account/regist_confirm.php">
 
            
             <div>

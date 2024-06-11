@@ -14,7 +14,7 @@ values('".$_POST['family_name']."','".$_POST['last_name']."','".$_POST['family_n
 
     <meta charset = "utf-8">
     <title>アカウント登録完了画面</title>
-    <link rel = "stylesheet"type = "text/css" href="insert%20style.css">
+    <link rel = "stylesheet"type = "text/css" href="regist_confirm%20style.css">
 
 </head>
     

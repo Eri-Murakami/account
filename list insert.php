@@ -9,6 +9,6 @@ if(!empty($_POST['family_name'])&&!empty($_POST['last_name'])&&!empty($_POST['fa
                .$_POST['family_name']."','".$_POST['last_name']."','".$_POST['family_name_kana']."','".$_POST['mail']."','".$_POST['gender']."','".$_POST['authority']."','".$_POST['registered_times']."','".$_POST['update_time']."');");
 };
 
-header("Location:http://localhost/account list/account_list index.php");
+header("Location:http://localhost/account list/list.php");
 
 ?>

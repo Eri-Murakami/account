@@ -4,7 +4,7 @@
 <head>
     <meta charet="utf-8">
     <title>お問い合わせフォームを作る</title>
-    <link rel="stylesheet" type="text/css" href="mail_confirm%20style.css">
+    <link rel="stylesheet" type="text/css" href="regist_confirm%20style.css">
     
     <!--「登録」ボタンを押したときにアラートを出す-->
     <!--<script language="JavaScript">
@@ -27,8 +27,8 @@
             <li>登録フォーム</li>
             <li>問い合わせ</li>
             <li>その他</li>
-            <li> <a href="home%20index.html">アカウント登録</a></li>
-            <li> <a href="account_list%20index.php">アカウント一覧</a></li>
+           <li> <a href="regist.php">アカウント登録</a></li>
+            <li> <a href="list.php">アカウント一覧</a></li>
             </ul>
          </header>
     
@@ -453,7 +453,7 @@
     </p> 
         
         <div class="button">
-            <form action="return_index.ph"method="post">
+            <form action="return_index.php"method="post">
                 <input type="submit"class="button1"value="前に戻る">
                  <input type = "hidden" value = "<?php echo $_POST['family_name'];?>" name="family_name">
                 <input type = "hidden" value = "<?php echo $_POST['last_name'];?>" name="last_name">
@@ -469,7 +469,7 @@
                 <input type = "hidden" value = "<?php echo $_POST['authority'];?>" name="authority">
             </form>
             
-            <form name="form" action="insert.php"method="post">
+            <form name="form" action="regist_complete.php"method="post">
                 <input type = "hidden" id="test1" value = "<?php echo $_POST['family_name'];?>" name = "family_name">
                 <input type = "hidden" id="test2" value = "<?php echo $_POST['last_name'];?>" name = "last_name">
                 <input type = "hidden" id="test3" value = "<?php echo $_POST['family_name_kana'];?>" name = "family_name_kana">

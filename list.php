@@ -4,7 +4,7 @@
        
         <meta charset="UTF-8">
         <title>アカウント一覧画面</title>
-        <link rel="stylesheet"type="text/css"href="account_list%20style%20.css">
+        <link rel="stylesheet"type="text/css"href="list.css">
     
     </head>
     
@@ -18,8 +18,8 @@
             <li>登録フォーム</li>
             <li>問い合わせ</li>
             <li>その他</li>
-            <li> <a href="home%20index.html">アカウント登録</a></li>
-            <li> <a href="http://localhost/account/account_list%20index.php">アカウント一覧</a></li>
+            <li> <a href="regist.php">アカウント登録</a></li>
+            <li> <a href="list.php">アカウント一覧</a></li>
             </ul>
          </header>
         
@@ -54,11 +54,11 @@
                 <?php
                 /* 有効と表示する*/
                 /*$delete_flag=0;*/
-                $row['delete_flag']=0;
-                if($row['delete_flag'] == 0){
-                    echo "有効";}
-                else{
-                    echo "無効";}
+                //$row['delete_flag']=0;
+                //if($row['delete_flag'] == 0){
+                    //echo "有効";}
+                //else{
+                    //echo "無効";}
                 ?>
                 
                 <!--row　=　行-->
@@ -70,17 +70,41 @@
                         echo "<td>".$row['family_name_kana']."</td>";
                         echo "<td>".$row['last_name_kana']."</td>";
                         echo "<td>".$row['mail']."</td>";
-                        echo "<td>".$row['gender']."</td>";
-                        echo "<td>".$row['authority']."</td>";
-                        echo "<td>".$row['delete_flag']."</td>";
-                     /*   echo "<td>".$row['delete_flag']=0;if($row['delete_flag']==0){echo "有効";}else{echo "無効";};."</td>"; */
+                        echo "<td>";
+                        if($row['gender']==0){
+                            echo "男";
+                        } else {
+                            echo "女";
+                        }
+                        echo "</td>";
+                        echo "<td>";
+                        if($row['authority']==0){
+                            echo "一般";
+                        } else {
+                            echo "管理者";
+                        }
+                        echo "</td>";
+//                        echo "<td>";
+//                        echo $row['authority'];
+//                        echo "</td>";
+                       // echo "<td>".$row['delete_flag']."</td>";
+                        //$row['delete_flag'] = 1;
+                        //echo "<td>".($row['delete_flag']==0 ? "有効" : "無効")."</td>";
+                        echo "<td>";
+                        //$row['delete_flag']=0;
+                        if($row['delete_flag']==0) {
+                            echo "有効";
+                        } else {
+                            echo "無効";
+                        }
+                        echo "</td>";
                        /* echo "<td>".$row['delete_flag'].$row['delete_flag']=0){if($row['delete_flag']==0){echo "有効";}else{echo "無効";};."</td>"; */
                         echo "<td>".$row['registered_time']."</td>";
                         echo "<td>".$row['update_time']."</td>";
                          /*echo "<td>".."</td>";*/
                         /*echo "<td>"."<input type="submit"class="button1"value="更新">"."<td>";*/
                         /*echo "<td>"."<input type="button" id="foobtn" value="更新"/>"."</td>";*/
-                       /* echo "<td>".<div class="button"><form action="return_index.ph"method="post"><input type="submit"class="button1"value="前に戻る"></form>."</td>";*/                        
+                       /* echo "<td>".<div class="button"><form action="return_index.ph"method="post"><input type="submit"class="button1"value="前に戻る"></form>."</td>";*/
                         echo "</tr>";
                         }
                         ?>
