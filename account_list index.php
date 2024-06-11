@@ -50,7 +50,7 @@
                 $stmt = $pdo->query("select * from account ORDER BY id DESC");
                 ?>
                 
-                <!-- パラメーターが　1＝有効、0＝無効-->
+                <!-- パラメーターが　0＝有効、1＝無効　-->
                 <?php
                 /* 有効と表示する*/
                 /*$delete_flag=0;*/
