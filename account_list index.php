@@ -43,7 +43,7 @@
                 </tr>
                 
                           
-                
+               <!-- ORDER BY id DESC = 降順-->
                 <?php
                 mb_internal_encoding("utf8");
                 $pdo = new PDO("mysql:dbname=account;host=localhost;","root","");
@@ -80,7 +80,7 @@
                          /*echo "<td>".."</td>";*/
                         /*echo "<td>"."<input type="submit"class="button1"value="更新">"."<td>";*/
                         /*echo "<td>"."<input type="button" id="foobtn" value="更新"/>"."</td>";*/
-                       /* echo "<td>".<div class="button"><form action="return_index.ph"method="post"><input type="submit"class="button1"value="前に戻る"></form>."</td>";*/                         
+                       /* echo "<td>".<div class="button"><form action="return_index.ph"method="post"><input type="submit"class="button1"value="前に戻る"></form>."</td>";*/                        
                         echo "</tr>";
                         }
                         ?>
