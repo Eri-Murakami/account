@@ -50,6 +50,17 @@
                 $stmt = $pdo->query("select * from account ORDER BY id DESC");
                 ?>
                 
+                <!-- パラメーターが　1＝有効、0＝無効-->
+                <?php
+                /* 有効と表示する*/
+                /*$delete_flag=0;*/
+                $row['delete_flag']=0;
+                if($row['delete_flag'] == 0){
+                    echo "有効";}
+                else{
+                    echo "無効";}
+                ?>
+                
                 <!--row　=　行-->
                     <?php while($row=$stmt->fetch()){
                         echo "<tr>";
@@ -61,14 +72,15 @@
                         echo "<td>".$row['mail']."</td>";
                         echo "<td>".$row['gender']."</td>";
                         echo "<td>".$row['authority']."</td>";
-                        echo "<td>".$row['delete_flag']."</td>";    
+                        echo "<td>".$row['delete_flag']."</td>";
+                     /*   echo "<td>".$row['delete_flag']=0;if($row['delete_flag']==0){echo "有効";}else{echo "無効";};."</td>"; */
+                       /* echo "<td>".$row['delete_flag'].$row['delete_flag']=0){if($row['delete_flag']==0){echo "有効";}else{echo "無効";};."</td>"; */
                         echo "<td>".$row['registered_time']."</td>";
                         echo "<td>".$row['update_time']."</td>";
                          /*echo "<td>".."</td>";*/
                         /*echo "<td>"."<input type="submit"class="button1"value="更新">"."<td>";*/
                         /*echo "<td>"."<input type="button" id="foobtn" value="更新"/>"."</td>";*/
-                       /* echo "<td>".<div class="button"><form action="return_index.ph"method="post"><input type="submit"class="button1"value="前に戻る"></form>."</td>";*/
-                         
+                       /* echo "<td>".<div class="button"><form action="return_index.ph"method="post"><input type="submit"class="button1"value="前に戻る"></form>."</td>";*/                         
                         echo "</tr>";
                         }
                         ?>
@@ -76,28 +88,27 @@
                
                 
              <!-- /*  テーブルの中にボタンを表示させる*/-->
-                        <td><div class="button">
-                        <form action="return_index.ph"method="post">
-                        <input type="submit"class="button1"value="更新"></form></td>
+                        <td>
+                            <div class="button">
+                                <form action="return_index.ph"method="post">
+                                    <input type="submit"class="button1"value="更新">
+                                </form>
+                            </div>
+                        </td>
+                
                 </table>
         
-       <!-- パラメーターが　1＝有効、0＝無効-->
-         <?php
-                if($delete_flag == 0){
-                    echo "有効";}
-                else{
-                    echo "無効";}
-        ?>
+      
                 
                 
                <!-- ボタン表示-->
-         <div class="button">
+         <!--<div class="button">
             <form action="return_index.ph"method="post">
                 <input type="submit"class="button1"value="前に戻る"></form>
              
                 <form action="" method="post"><button type="submit" name="add">更新</button></form>
                 <input type="submit"class="button1"value="更新"><input type="submit"class="button2"value="削除">
-             <input type="button" id="botton" value="更新"/></div>
+             <input type="button" id="botton" value="更新"/></div>-->
        
    
         
