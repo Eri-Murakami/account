@@ -104,14 +104,21 @@
                          /*echo "<td>".."</td>";*/
                         /*echo "<td>"."<input type="submit"class="button1"value="更新">"."<td>";*/
                         /*echo "<td>"."<input type="button" id="foobtn" value="更新"/>"."</td>";*/
-                       /* echo "<td>".<div class="button"><form action="return_index.ph"method="post"><input type="submit"class="button1"value="前に戻る"></form>."</td>";*/
-                        /*echo "<td>";
-                        echo "<div class="button">";
-                        echo "<form action="return_index.ph"method="post">";
-                        echo "<input type="submit"class="button1"value="更新">";
-                        echo "</form>";
-                        echo "</div>";
-                        echo "</td>"*/
+                      /*  echo "<td>".<div class="button"><form action="return_index.ph"method="post"><input type="submit"class="button1"value="前に戻る"></form>."</td>";*/
+                        /*echo "<td>";*/
+                       /* echo "<div class="button">";
+                        echo "<form action="return_index.php"method="post">";*/
+                      /*  echo "<input type="submit"class="button1"value="更新">";*/
+                       /* echo "</form>";
+                        echo "</div>";*/
+                        /*echo "</td>"*/
+    echo "<td>
+                            <div class="button">
+                                <form action=""method="post">
+                                    <input type="submit"class="button1"value="更新">
+                                </form>
+                            </div>
+                        </td>";
                         echo "</tr>";
                         }
                         ?>
@@ -121,7 +128,7 @@
              <!-- /*  テーブルの中にボタンを表示させる*/-->
                         <td>
                             <div class="button">
-                                <form action="return_index.ph"method="post">
+                                <form action=""method="post">
                                     <input type="submit"class="button1"value="更新">
                                 </form>
                             </div>
