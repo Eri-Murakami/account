@@ -101,6 +101,14 @@
                        /* echo "<td>".$row['delete_flag'].$row['delete_flag']=0){if($row['delete_flag']==0){echo "有効";}else{echo "無効";};."</td>"; */
                         echo "<td>".$row['registered_time']."</td>";
                         echo "<td>".$row['update_time']."</td>";
+                        echo '<td>
+                                <form action="delete.php" method="post">
+                                    <input type="submit" class="button1" value="更新">
+                                </form>
+                                <form action="update.php" method="post">
+                                    <input type="submit" class="button1" value="削除">
+                                </form>
+                                </td>';
                          /*echo "<td>".."</td>";*/
                         /*echo "<td>"."<input type="submit"class="button1"value="更新">"."<td>";*/
                         /*echo "<td>"."<input type="button" id="foobtn" value="更新"/>"."</td>";*/
@@ -112,9 +120,9 @@
                        /* echo "</form>";
                         echo "</div>";*/
                         /*echo "</td>"*/
-                            echo "<td>"."<div class="button">"."<form action=""method="post">"."</td>"."<input type="submit"class="button1"value="更新">"." </form>"."</div>";
+                           /* echo "<td>"."<div class="button">"."<form action=""method="post">"."</td>"."<input type="submit"class="button1"value="更新">"." </form>"."</div>";
                             echo "<td>"
-    
+    */
                             /*<div class="button">
                                 <form action=""method="post">
                                     <input type="submit"class="button1"value="更新">
@@ -128,14 +136,14 @@
                
                 
              <!-- /*  テーブルの中にボタンを表示させる*/-->
-                      <!--  <td>
+                        <td>
                             <div class="button">
                                 <form action=""method="post">
                                     <input type="submit"class="button1"value="更新">
                                 </form>
                             </div>
                         </td>
-                -->
+                
                 </table>
         
       
