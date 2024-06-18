@@ -78,8 +78,8 @@
             
              <div>
                 <label>性別</label><br><!--初期値「男」-->
-                <input type="radio" name="gender" value="男" checked="checked">男
-                <input type="radio" name="gender" value="女" >女
+                <input type="radio" name="gender" value="0" checked="checked">男
+                <input type="radio" name="gender" value="1" >女
             </div>
             
              <div>
@@ -159,8 +159,8 @@
              <div>
                 <label>アカウント制限</label><br><!--初期値「一般」-->
                  <select name="authority"required>
-                     <option value="一般"selected>一般</option>
-                     <option value="管理者">管理者</option>
+                     <option value="0"selected>一般</option>
+                     <option value="1">管理者</option>
                  </select>
             </div>
             
