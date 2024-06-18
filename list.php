@@ -112,13 +112,14 @@
                        /* echo "</form>";
                         echo "</div>";*/
                         /*echo "</td>"*/
-    echo "<td>
-                            <div class="button">
+                            echo "<td>"."<div class="button">"."<form action=""method="post">"."</td>"."<input type="submit"class="button1"value="更新">"." </form>"." </form>";
+                            echo "<td>"
+                            /*<div class="button">
                                 <form action=""method="post">
                                     <input type="submit"class="button1"value="更新">
                                 </form>
-                            </div>
-                        </td>";
+                             </form>
+                        </td>";*/
                         echo "</tr>";
                         }
                         ?>
@@ -126,14 +127,14 @@
                
                 
              <!-- /*  テーブルの中にボタンを表示させる*/-->
-                        <td>
+                      <!--  <td>
                             <div class="button">
                                 <form action=""method="post">
                                     <input type="submit"class="button1"value="更新">
                                 </form>
                             </div>
                         </td>
-                
+                -->
                 </table>
         
       
