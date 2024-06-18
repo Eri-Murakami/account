@@ -26,7 +26,7 @@
              <h1>アカウント一覧画面</h1>
          <!--<form method="post"action="account list insert.php">
     -->
-            <table border="1" cellspacing="0" cellpadding="5" align="center">
+            <table border="1" cellspacing="0" cellpadding="5" align="center" style="table-layout:fixed;width:100%;">
                 <tr bgcolor="#d3d3d3">
                     <th>ID</th>
                     <th>名前（性）</th>
@@ -136,13 +136,13 @@
                
                 
              <!-- /*  テーブルの中にボタンを表示させる*/-->
-                        <td>
+                       <!-- <td>
                             <div class="button">
                                 <form action=""method="post">
                                     <input type="submit"class="button1"value="更新">
                                 </form>
                             </div>
-                        </td>
+                        </td>-->
                 
                 </table>
         
