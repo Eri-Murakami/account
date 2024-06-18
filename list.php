@@ -112,8 +112,8 @@
                        /* echo "</form>";
                         echo "</div>";*/
                         /*echo "</td>"*/
-                            /*echo "<td>"."<div class="button">"."<form action=""method="post">"."</td>"."<input type="submit"class="button1"value="更新">"." </form>"." </form>";
-                            echo "<td>"*/
+                            echo "<td>"."<div class="button">"."<form action=""method="post">"."</td>"."<input type="submit"class="button1"value="更新">"." </form>"."</div>";
+                            echo "<td>"
     
                             /*<div class="button">
                                 <form action=""method="post">
