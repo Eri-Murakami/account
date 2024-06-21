@@ -324,7 +324,14 @@
         
     <p>性別
         <br>
-        <?php echo $_POST['gender'];?>
+        <?php echo $_POST['gender'];
+         if($row['gender']==0){
+                            echo "男";
+                        } else {
+                            echo "女";
+                        }
+        ?>
+    
     </p>
     
     <p>郵便番号
@@ -450,6 +457,8 @@
       <p>アカウント制限
         <br>
          <?php echo $_POST['authority'];?>
+                    
+ 
     </p> 
         
         <div class="button">

@@ -109,6 +109,14 @@
                                     <input type="submit" class="button1" value="削除">
                                 </form>
                                 </td>';
+                         /*echo "<td>
+                                <form action="delete.php" method="post">
+                                    <input type="submit" class="button1" value="更新">
+                                </form>
+                                <form action="update.php" method="post">
+                                    <input type="submit" class="button1" value="削除">
+                                </form>
+                                </td>";*/
                          /*echo "<td>".."</td>";*/
                         /*echo "<td>"."<input type="submit"class="button1"value="更新">"."<td>";*/
                         /*echo "<td>"."<input type="button" id="foobtn" value="更新"/>"."</td>";*/

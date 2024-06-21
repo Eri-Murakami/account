@@ -109,10 +109,10 @@
             
             <div>
                 <label>性別</label><br><!--初期値「男」-->
-                <input type="radio" name="gender" value="男"
-                       <?php if (isset($_POST['gender'])&& $_POST['gender']=="男")echo 'checked';?>>男
-                <input type="radio" name="gender" value="女"
-                        <?php if (isset($_POST['gender'])&& $_POST['gender']=="女")echo 'checked';?>>女
+                <input type="radio" name="gender" value="0"
+                       <?php if (isset($_POST['gender'])&& $_POST['gender']=="0")echo 'checked';?>>男
+                <input type="radio" name="gender" value="1"
+                        <?php if (isset($_POST['gender'])&& $_POST['gender']=="1")echo 'checked';?>>女
             </div>
             
             
@@ -208,8 +208,8 @@
             <div>
                 <label>アカウント制限</label><br><!--初期値「一般」-->
                  <select name="authority">
-                     <option value="一般" <?php if (isset($_POST['authority'])&& $_POST['authority']=="一般")echo 'selected';?>>一般</option>
-                     <option value="管理者" <?php if (isset($_POST['authority'])&& $_POST['authority']=="管理者")echo 'selected';?>>管理者</option>
+                     <option value="0" <?php if (isset($_POST['authority'])&& $_POST['authority']=="0")echo 'selected';?>>一般</option>
+                     <option value="1" <?php if (isset($_POST['authority'])&& $_POST['authority']=="1")echo 'selected';?>>管理者</option>
                  </select>
             </div>
             
