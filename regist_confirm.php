@@ -324,13 +324,12 @@
         
     <p>性別
         <br>
-        <?php echo $_POST['gender'];
-         if($row['gender']==0){
-                            echo "男";
-                        } else {
-                            echo "女";
-                        }
-        ?>
+           <?php 
+          if($_POST['gender'] == 0){
+                    echo "男";}
+                else{
+                    echo "女";}
+          ?>
     
     </p>
     
@@ -456,7 +455,12 @@
     
       <p>アカウント制限
         <br>
-         <?php echo $_POST['authority'];?>
+         <?php 
+          if($_POST['authority'] == 0){
+                    echo "一般";}
+                else{
+                    echo "管理者";}
+          ?>
                     
  
     </p> 
